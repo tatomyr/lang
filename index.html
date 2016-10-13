@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Lang Example</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="lang.js"></script>
+  <link rel="stylesheet" type="text/css" href="lang.css">
+
+</head><body>
+
+      <button data-lang-set="uk">[УКР]</button>
+      <button data-lang-set="en">[EN]</button>
+      <h1>
+        <span data-lang="uk">Привіт</span>
+        <span data-lang="en">Hello</span>
+	!
+      </h1>
+	
+      <script>
+	const lang = new Lang('uk');
+      </script>
+</body></html>
+
