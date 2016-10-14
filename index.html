@@ -2,23 +2,22 @@
 <html><head>
   <meta charset="utf-8">
   <title>Lang Example</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!-- The library needs jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Put the next two lines into your html head to enable the Lang library -->
-  <script src="https://tatomyr.github.io/lang/lang.js"></script>
+  <script src="https://tatomyr.github.io/lang/lang.js" data-lang-default="en"></script>
   <link rel="stylesheet" type="text/css" href="https://tatomyr.github.io/lang/lang.css">
 </head><body>
-      <button data-lang-set="uk">[УКР]</button>
-      <button data-lang-set="en">[EN]</button>
-      <h1>
-        <span data-lang="uk">Привіт</span>
-        <span data-lang="en">Hello</span>
-	!
-      </h1>
-	
-      <script>
-	const lang = new Lang('uk');
-      </script>
+  <button data-lang-set="uk">[УКР]</button>
+  <button data-lang-set="en">[EN]</button>
+  <button data-lang-set="es">[ES]</button>
+  <button data-lang-set="ch">[CHI]</button>
+  <h1>
+    <span data-lang="uk">Привіт</span>
+    <span data-lang="en">Hello</span>
+    <span data-lang="es">Hola</span>
+    <span data-lang="ch">你好</span>
+    !
+  </h1>
 </body></html>
 

@@ -53,3 +53,16 @@ class Lang {
   }
 
 }
+
+const getScriptParams = () => {
+  var scripts = document.getElementsByTagName('script');
+  var lastScript = scripts[scripts.length-1];
+  var scriptName = lastScript;
+  console.log(scriptName.getAttribute('data-lang-default'));
+  return scriptName.getAttribute('data-lang-default');
+
+}
+
+$(document).ready(function() {
+  const lang = new Lang(getScriptParams());
+});
