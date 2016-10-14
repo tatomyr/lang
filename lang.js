@@ -10,7 +10,6 @@ class Lang {
     this.set(this.getCookie('lang') || defaultLanguage);
 
     $('[data-lang-set]').click((event) => {
-      console.log(event);
       this.set(event.currentTarget.dataset.langSet);
     });
   }
@@ -18,6 +17,8 @@ class Lang {
   set(lang) {
     $(`[data-lang]`).addClass('lang-hidden');
     $(`[data-lang=${lang}]`).removeClass('lang-hidden');
+
+    console.log('set lang:',lang);
 
     this.setCookie('lang', lang);
   }
@@ -54,15 +55,8 @@ class Lang {
 
 }
 
-const getScriptParams = () => {
-  var scripts = document.getElementsByTagName('script');
-  var lastScript = scripts[scripts.length-1];
-  var scriptName = lastScript;
-  console.log(scriptName.getAttribute('data-lang-default'));
-  return scriptName.getAttribute('data-lang-default');
+const langDefault = document.currentScript.dataset.langDefault;
 
-}
-
-$(document).ready(function() {
-  const lang = new Lang(getScriptParams());
+$(document).ready(() => {
+  const lang = new Lang(langDefault);
 });
