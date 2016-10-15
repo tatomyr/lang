@@ -1,8 +1,9 @@
 /**
  * Multilanguage library [data-lang]
  *
- * Use [data-lang-set] attribute with appropriate language namr on language swither
+ * Use [data-lang-set] attribute with appropriate language name on language switcher
  * Use [data-lang] attribute with appropriate language name on elements which represent the text you want to show
+ * Use [data-lang-default] attribute on script call in html head to set default language
  */
 
 class Lang {
