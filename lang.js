@@ -8,7 +8,7 @@
 
 class Lang {
   constructor(defaultLanguage) {
-    this.set(this.getCookie('lang') || defaultLanguage);
+    this.set(this.getCookie('lang') || defaultLanguage || navigator.language.substr(0,2));
 
     $('[data-lang-set]').click((event) => {
       this.set(event.currentTarget.dataset.langSet);
